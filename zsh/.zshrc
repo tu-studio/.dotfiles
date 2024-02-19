@@ -56,7 +56,7 @@ bindkey '^H' backward-kill-word
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
-# editor selection
+# term needs to be changed otherwise we get very strange behaviors, maybe xterm-kitty is not yet supported in this zsh version?
 export TERM=xterm
 export EDITOR=nvim
 
