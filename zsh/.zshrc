@@ -15,15 +15,6 @@ bindkey -e
 # Great zsh Theme
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
-# Standard way to do something conditional on terminal capabilities is to look at TERM environment variable (TERM is usually propagated through ssh connections).
-# Zsh knows how to infer terminal capabilities from the value of TERM, so we can just ask zsh if the terminal supports at least 256 colors.
-if zmodload zsh/terminfo && (( terminfo[colors] >= 256 )); then
-  [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
-else
-  [[ ! -f ~/.zsh/.p10k-portable.zsh ]] || source ~/.zsh/.p10k-portable.zsh
-fi
-
 # Use history substring search
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 # Bind UP and DOWN arrow keys to history substring search
