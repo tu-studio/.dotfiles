@@ -74,6 +74,4 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
 # editor selection
-export EDITOR=nano
-
-neofetch
+export EDITOR=nvim
