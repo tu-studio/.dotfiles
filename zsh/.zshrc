@@ -18,9 +18,6 @@ source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 # Use history substring search
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 # Bind UP and DOWN arrow keys to history substring search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up			
 bindkey '^[[B' history-substring-search-down
 
@@ -50,11 +47,6 @@ pathappend() {
   done
 }
 
-# For the notify-send script volume_sink and volume_source
-export NID_SINK_VOLUME=9998
-export NID_SOURCE_VOLUME=9999
-export LC_ALL=C.UTF-8
-
 pathappend "$HOME/.local/bin"
 
 # Special shortcuts for jumping words
@@ -65,4 +57,8 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
 # editor selection
+export TERM=xterm
 export EDITOR=nvim
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
